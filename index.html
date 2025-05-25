@@ -1,0 +1,1050 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khushi Mahajan – UX Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter&display=swap" rel="stylesheet">
+  <style>
+    html {
+  scroll-behavior: smooth;
+}
+
+    :root {
+      --primary-color: #00576b;
+      --background-dark: #1c2a35;
+    }
+
+    body {
+     
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      background-image: radial-gradient(#d4d4d4 1px, transparent 1px);
+      background-size: 20px 20px;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    a:hover {
+      transform: scale(1.05);
+      transition: transform 0.2s ease;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      background: #474747;
+      border-radius: 40px;
+      padding: 8px 20px;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+
+    .nav-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-icon img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #0070c9;
+    }
+.hero {
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  background-image: radial-gradient(#dddddd 1px, transparent 1px);
+  background-size: 20px 20px;
+  z-index: 1;
+}
+
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .intro-text {
+      font-size: 1.2rem;
+      color: #888;
+      margin-bottom: 0.5rem;
+    }
+
+.name {
+  font-family: 'Playfair Display', serif;
+  font-size: 8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-transform: lowercase;
+  background:#00576b;
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientText 100s ease infinite;
+  transition: all 0.3s ease-in-out;
+  animation: typing 3s steps(30, start) forwards;
+
+
+}
+.name::after {
+  content: "";
+}
+.name:hover {
+  color: #a78bfa; /* subtle text color shift */
+  text-shadow: 0 1px 6px rgba(139, 208, 227, 0.5); /* soft purple glow */
+  cursor: pointer;
+}
+
+.name:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes gradientText {
+  0% { background-position: 0% }
+  100% { background-position: 200% }
+    }
+    @keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: transparent; }
+}
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #00c2ff, 0 0 10px #00c2ff, 0 0 15px #00c2ff;
+  }
+  100% {
+    text-shadow: 0 0 10px #00c2ff, 0 0 20px #00c2ff, 0 0 30px #00c2ff;
+  }
+}
+.name.typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: none; /* No cursor */
+  animation: typing 2.5s steps(30, end) forwards;
+}
+  /* Typing Animation */
+    .typing-text {
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typing 3s steps(30, end);
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    /* Floating Image Animation */
+    .floating {
+      animation: float 3s ease-in-out;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    /* Glowing Button */
+    .glow-btn {
+      animation: glow 2s ease-in-out ;
+    }
+
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 5px #fff;
+      }
+      to {
+        box-shadow: 0 0 20px #fff;
+      }
+    }
+
+    /* Fade-in subtitle */
+    .fade-in-subtitle {
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 2.5s;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Stroke text animation */
+    .stroke-text {
+      color: transparent;
+      -webkit-text-stroke: 1px white;
+      animation: fillText 3s ease forwards;
+      animation-delay: 2s;
+    }
+
+    @keyframes fillText {
+      to {
+        color: white;
+      }
+    }
+
+    .tags {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      color: #444;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: #ff85b0;
+      border-radius: 50%;
+      margin: 0 10px;
+    }
+
+    .decorations {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+    }
+
+    .decorations img {
+      position: absolute;
+    }
+
+    .star { top: 20%; right: 15%; width: 150px; }
+    .swirl { left: 5%; bottom: 60%; width: 180px; }
+    .plane { bottom: 8%; left: 20%; width: 200px; }
+    .dots { right: 7%; bottom: 12%; width: 220px; }
+
+    .works-section {
+      background-color: #304b51;
+      padding: 100px 20px;
+      text-align: center;
+      border-radius: 100px;
+    }
+
+    .works-title {
+      font-size: 2rem;
+      color: white;
+      letter-spacing: 4px;
+      margin-bottom: 50px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .project-card {
+  background-color: #f2f2f2;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 480px;
+  margin: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-header {
+      padding: 30px;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: bold;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      position: relative;
+    }
+
+    .card-header h3 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    .card-header span {
+      font-size: 0.8rem;
+    }
+
+    .year {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #1c2a35;
+      padding: 5px 10px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+    }
+
+    .card-image {
+      height: 200px;
+      background-color: #ddd;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.5s ease;
+    }
+
+    .project-card:hover .card-image {
+      transform: scale(1.1);
+    }
+
+    .card-tags {
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      background-color: #ffc6c6;
+      color: #333;
+      padding: 10px 15px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease;
+    }
+
+
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .name {
+        font-size: 4rem;
+      }
+
+  
+        .navbar a:active {
+        top: 10px;
+        gap: 15px;
+        flex-wrap: wrap;
+        padding: 10px 15px;
+      }
+
+      .hero {
+        padding: 60px 10px 20px;
+      }
+
+      .card-header h3 {
+        font-size: 1rem;
+      }
+
+      .card-image {
+        height: 180px;
+      }
+
+      .card-tags {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .name {
+        font-size: 3rem;
+      }
+
+      .intro-text {
+        font-size: 1rem;
+      }
+
+      .tags {
+        font-size: 0.9rem;
+      }
+
+      .works-title {
+        font-size: 1.5rem;
+      }
+
+      .card-tags {
+        padding: 15px;
+      }
+
+      .tag {
+        font-size: 0.7rem;
+      }
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    .about-section {
+      background: #f2f9f7;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 80px 10%;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .text-content {
+      max-width: 550px;
+    }
+
+    .headline {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .headline span {
+      color: #007f5f;
+    }
+
+    .about-text {
+      font-size: 1.05rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .image-stack {
+      position: relative;
+      width: 300px;
+      height: 420px;
+      perspective: 1000px;
+    }
+
+    .stacked-image {
+  position: absolute;
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  pointer-events: auto;
+  transition: opacity 0.6s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Apply custom base transforms individually so hover can override them */
+.stacked-image:nth-child(1) {
+  z-index: 3;
+  top: 0;
+  left: 0;
+  transform: rotate(-3deg) translateY(60px) scale(0.9);
+}
+
+.stacked-image:nth-child(2) {
+  z-index: 2;
+  top: 20px;
+  left: 20px;
+  transform: rotate(3deg) translateY(60px) scale(0.9);
+}
+
+.stacked-image:nth-child(3) {
+  z-index: 1;
+  top: 40px;
+  left: 40px;
+  transform: rotate(-5deg) translateY(60px) scale(0.9);
+}
+
+/* When visible (on scroll-in) */
+.stacked-image.visible {
+  opacity: 1;
+  transform: rotate(0deg) translateY(0) scale(1);
+}
+
+/* Hover effect — overrides rotation and scale for lift effect */
+.stacked-image.visible:hover {
+  transform: translateY(-10px) scale(1.05) rotate(0deg);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+
+    @media (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+        padding: 60px 5%;
+      }
+
+      .image-stack {
+        margin-top: 40px;
+      }
+    }
+
+    .photography-section {
+  padding: 4rem 2rem;
+  
+  overflow: hidden;
+}
+
+.photo-title {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #007f5f;
+  font-size: 2rem;
+  margin-bottom: 5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.photo-scroll-container {
+  overflow-x: hidden;
+
+  position: relative;
+}
+
+.photo-row {
+  display: flex;
+  gap: 1rem;
+  animation: scrollPhotos 30s linear infinite;
+}
+
+.photo-row img {
+  height: 200px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+.photo-gallery {
+  column-count: 3;
+  column-gap: 1.5rem;
+}
+
+.photo-card {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
+
+/* Animation */
+@keyframes scrollPhotos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+@keyframes bgGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.copyright-footer {
+  text-align: center;
+  padding: 24px 0;
+  font-size: 14px;
+  color: #323232;
+  background-color: #ffc9ef;
+  border-top: 1px solid #eee;
+  margin-top: 0px;
+}
+
+.copyright-footer p {
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+/* Hide the default cursor */
+body {
+  cursor: none;
+}
+.photography-section {
+  background-image: radial-gradient(#d4d4d4 1px, transparent 1px);
+  animation: gradientShift 10s ease infinite;
+  background-size: 400% 400%;
+  background-size: 20px 20px;
+      color: #333;
+      overflow-x: hidden;
+}
+.photo-scroll-container {
+  background-image: radial-gradient(#eee 1px, transparent 1px);
+  animation: gradientShift 10s ease infinite;
+  background-size: 400% 400%;
+  background-size: 20px 20px;
+      color: #333;
+      overflow-x: hidden;
+}
+
+
+
+
+/* Style the yellow dot */
+.custom-cursor {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ffcfdf; /* pastel pink or match brand */
+  background-color: rgba(255, 122, 167, 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  box-shadow: 0 0 8px rgba(255, 207, 223, 0.8);
+  transition: transform 0.1s ease-out;
+  transform: translate(-50%, -50%);
+}
+.custom-cursor.hover {
+  transform: translate(-50%, -50%) scale(1.8);
+  background-color: rgba(255, 255, 200, 0.4);
+  box-shadow: 0 0 12px rgba(255, 255, 200, 0.6);
+}
+.typing-text-lens {
+  font-family: poppins, sans-serif;
+  display: block;
+  margin: 3rem auto; /* Top and bottom spacing, center horizontally */
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing-lens 3s steps(24, end) forwards;
+  font-size: 2rem;
+  text-align: center;
+}
+
+@keyframes typing-lens {
+  from {
+    width: 0;
+  }
+  to {
+    width: 17ch; /* 15 characters */
+  }
+}
+/* Slide-in Animation */
+.slide-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.slide-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide in from bottom */
+.slide-in-bottom {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When visible */
+.slide-in-bottom.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* When hidden again (scroll up) */
+.slide-in-bottom.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+</style>
+
+</head>
+<body>
+  <div class="custom-cursor"></div>
+
+ <section> <div class="navbar">
+    <div class="nav-icon">
+      <img src="khushii4.jpeg" alt="Star Icon" />
+    </div>
+    <li><a href="#work">work</a></li>
+    <li><a href="#about">about</a></li>
+    <li><a href="contact.html">get in touch</a></li>
+  </div>
+</section>
+
+
+  <section class="hero">
+    <p class="intro-text">hello there, I’m</p> 
+   <h1 class="name">Khushi Mahajan</h1>
+
+    <p class="tags">
+      UX designer <span class="dot"></span>
+      UX Researcher <span class="dot"></span>
+      Web Developer
+    </p>
+    <div class="decorations">
+      <img src="star.png" alt="Star" class="star" />
+      <img src="swirl.png" alt="Swirl" class="swirl" />
+      <img src="illust4.png" alt="Paper Plane" class="plane" />
+      <img src="dots.png" alt="Dots" class="dots" />
+    </div>
+  </section>
+
+ <section class="about-section" id="about">
+  <div class="text-content" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+    <h2 class="headline">I design<span> digital (& delightful) </span>experiences.</h2>
+    <p class="about-text">
+      I’m a second-year UX design student at MITSD, Pune, passionate about creating simple, human-centered digital experiences.
+      I love exploring how people interact with technology, and I’m constantly learning through hands-on projects and experimentation.
+    </p>
+    <p class="about-text">
+      Outside of design, I enjoy watching cricket, films, and getting lost in music.<br><br>
+      I’m always open to new opportunities and collaborations. Let’s connect!
+    </p>
+  </div>
+
+  <div class="image-stack" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
+    <img src="DSC_0605.JPG" class="stacked-image" alt="Photo 1" />
+    <img src="prof1.jpeg" class="stacked-image" alt="Photo 2" />
+    <img src="prof2.jpeg" class="stacked-image" alt="Photo 3" />
+  </div>
+</section>
+
+
+
+</body>
+  <section class="works-section" id="work" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+    <div class="works-title">CASE STUDIES</div>
+    <div class="card-grid">
+
+    <a href="file:///E:/SEM%204/content%20creators%20full.pdf" class="project-card-link">
+      <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+        <div class="card-header" style="background-color: darkolivegreen">
+          <div>
+            <h3>MENTAL HEALTH OF CONTENT CREATORS</h3>
+            <span>mood tracking app</span>
+          </div>
+          <div class="year">2025</div>
+        </div>
+        <div class="card-image" style="background-image: url('ixdia.png');"></div>
+        <div class="card-tags">
+          <div class="tag">PROTOTYPE</div>
+          <div class="tag">UI DESIGN</div>
+          <div class="tag">WIREFRAMING</div>
+        </div>
+      </div>
+    </a>
+
+      <a href="your-link.html" class="project-card-link">
+      <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+        <div class="card-header" style="background-color: #5a5445">
+          <div>
+            <h3>AI DISEASE & SYMPTOM TRACKER</h3>
+            <span>healthcare app</span>
+          </div>
+          <div class="year">2024</div>
+        </div>
+        <div class="card-image" style="background-image: url('unnamed.png');"></div>
+        <div class="card-tags">
+          <div class="tag">UX RESEARCH</div>
+          <div class="tag">WIREFRAMING</div>
+          <div class="tag">UI DESIGN</div>
+        </div>
+      </div>
+      </a>
+
+<a href="file:///E:/SEM%204/Ai%20in%20language%20learning%20presentation.pdf" class="project-card-link">
+      <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+        <div class="card-header" style="background-color: rgb(108, 60, 95)">
+          <div>
+            <h3>AI IN LANGUAGE LEARNING APPS</h3>
+            <span>usability testing</span>
+          </div>
+          <div class="year">2025</div>
+        </div>
+        <div class="card-image" style="background-image: url('lang.png');"></div>
+        <div class="card-tags">
+          <div class="tag">USABILITY TESTING</div>
+          <div class="tag">UX RESEARCH</div>
+        </div>
+      </div>
+      </a>
+
+      <a href="your-link.html" class="project-card-link">
+      <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+        <div class="card-header" style="background-color: darkolivegreen">
+          <div>
+            <h3>SANITARY WASTE DISPENSING MACHINE</h3>
+            <span>design thinking</span>
+          </div>
+          <div class="year">2024</div>
+        </div>
+        <div class="card-image" style="background-image: url('san.png');"></div>
+        <div class="card-tags">
+          <div class="tag">UX RESEARCH</div>
+          <div class="tag">PRODUCT PROTOTYPE</div>
+        </div>
+      </div>
+      </a>
+
+      <a href="your-link.html" class="project-card-link">
+  <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+    <div class="card-header" style="background-color: #5a5445">
+      <div>
+        <h3>FILM & MEDIA INVENTORY MANAGEMENT</h3>
+        <span>system design</span>
+      </div>
+      <div class="year">2024</div>
+    </div>
+    <div class="card-image" style="background-image: url('film.png');"></div>
+    <div class="card-tags">
+      <div class="tag">UML DIAGRAMS</div>
+      <div class="tag">UX RESEARCH</div>
+    </div>
+  </div>
+</a>
+
+<a href="https://preview.webflow.com/preview/kortex-2ee897?utm_medium=preview_link&utm_source=designer&utm_content=kortex-2ee897&preview=b5d2818f2de4085eafc8ad35e9b0adb3&workflow=preview" class="project-card-link">
+      <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+        <div class="card-header" style="background-color:rgb(108, 60, 95)">
+          <div>
+            <h3>KORTEX - PHONE COVER WEBSITE ON WEBFLOW</h3>
+            <span>website designing</span>
+          </div>
+          <div class="year">2024</div>
+        </div>
+        <div class="card-image" style="background-image: url('kortex.png');"></div>
+        <div class="card-tags">
+          <div class="tag">WEBITE DESIGN</div>
+          <div class="tag">UI</div>
+          <div class="tag">STYLE GUIDE</div>
+        </div>
+      </div>
+    </div>
+  </a>
+  </section>
+
+ <section id="photography" class="photography-section slide-in-bottom">
+
+  <h2 class="photo-title typing-text-lens">life through my lens.</h2>
+
+  <div class="photo-scroll-container">
+    
+    <div class="photo-row">
+      
+      <img src="p1.jpeg" alt="Photo 1">
+      <img src="p2.jpeg" alt="Photo 2">
+      <img src="p3.jpeg" alt="Photo 3">
+      <img src="p4.jpeg" alt="Photo 4">
+      <img src="p5.jpeg" alt="Photo 5">
+      <img src="p6.jpeg" alt="Photo 6">
+      <img src="p7.jpeg" alt="Photo 7">
+      <img src="p8.jpeg" alt="Photo 8">
+      <img src="p9.jpeg" alt="Photo 9">
+      <img src="p10.jpeg" alt="Photo 10">
+
+      <img src="p1.jpeg" alt="Photo 1">
+      <img src="p2.jpeg" alt="Photo 2">
+      <img src="p3.jpeg" alt="Photo 3">
+      <img src="p4.jpeg" alt="Photo 4">
+      <img src="p5.jpeg" alt="Photo 5">
+      <img src="p6.jpeg" alt="Photo 6">
+      <img src="p7.jpeg" alt="Photo 7">
+      <img src="p8.jpeg" alt="Photo 8">
+      <img src="p9.jpeg" alt="Photo 9">
+      <img src="p10.jpeg" alt="Photo 10">
+    </div>
+  </div>
+</section>
+<section>
+<footer class="copyright-footer">
+  <p>© 2025 Khushi Mahajan. All rights reserved.</p>
+</footer>
+</section>
+
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+  const imageStack = document.querySelector('.image-stack');
+  const images = document.querySelectorAll('.stacked-image');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          images.forEach((img, index) => {
+            setTimeout(() => {
+              img.classList.add('visible');
+            }, index * 300);
+          });
+        } else {
+          images.forEach((img, index) => {
+            setTimeout(() => {
+              img.classList.remove('visible');
+            }, index * 100);
+          });
+        }
+      });
+    },
+    { threshold: 0.4 }
+  );
+
+  observer.observe(imageStack);
+  
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const nameElement = document.querySelector('.name');
+    const fullText = nameElement.textContent.trim();
+    nameElement.textContent = '';
+
+    let index = 0;
+
+    function typeChar() {
+      if (index < fullText.length) {
+        nameElement.textContent += fullText.charAt(index);
+        index++;
+        setTimeout(typeChar, 80); // Adjust speed here
+      }
+    }
+
+    typeChar();
+  });
+</script>
+<script>
+  const cursor = document.querySelector('.custom-cursor');
+
+  window.addEventListener('mousemove', e => {
+    cursor.style.top = `${e.clientY}px`;
+    cursor.style.left = `${e.clientX}px`;
+  });
+</script>
+
+<script>
+  function revealOnScroll() {
+    const elements = document.querySelectorAll('.slide-in');
+    const triggerBottom = window.innerHeight * 0.9;
+
+    elements.forEach(el => {
+      const rect = el.getBoundingClientRect().top;
+
+      if (rect < triggerBottom) {
+        el.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
+<script>
+  const section = document.querySelector('.photography-section');
+
+  let lastScrollY = window.scrollY;
+
+  function handleScroll() {
+    const sectionTop = section.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    const isScrollingDown = window.scrollY > lastScrollY;
+    lastScrollY = window.scrollY;
+
+    if (sectionTop < windowHeight - 100 && isScrollingDown) {
+      section.classList.add('visible');
+      section.classList.remove('hidden');
+    } else if (!isScrollingDown && sectionTop < windowHeight) {
+      section.classList.remove('visible');
+      section.classList.add('hidden');
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll);
+</script>
+
+
+</body>
+</html>
+
